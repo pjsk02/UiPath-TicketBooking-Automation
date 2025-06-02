@@ -1,0 +1,202 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1025.6,2599.2" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>System.ComponentModel</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence sap2010:Annotation.AnnotationText="1. Locate and select a folder containing multiple files.&#xA;2. List the directory path of all the files in the Output panel.&#xA;3. Store the updated names in MS Word file and save and close it.&#xA;--Jajapuram Giridhar Reddy - 20BRS1004" DisplayName="Sequence – This code is to write all the file names in MS Word present in a particular folder" sap:VirtualizedContainerService.HintSize="550.4,2534.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="foldername" />
+      <Variable x:TypeArguments="s:String[]" Name="filelist" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:SelectFolder sap2010:Annotation.AnnotationText="User selects a folder&#xA;" DisplayName="Browse for folder" sap:VirtualizedContainerService.HintSize="508.8,124" sap2010:WorkflowViewState.IdRef="SelectFolder_1" SelectedFolder="[foldername]">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:SelectFolder>
+    <Assign sap2010:Annotation.AnnotationText="Get all the file names that the user selects and stores it in a list" DisplayName="Assign - 'File List'" sap:VirtualizedContainerService.HintSize="508.8,104" sap2010:WorkflowViewState.IdRef="Assign_1">
+      <Assign.To>
+        <OutArgument x:TypeArguments="s:String[]">[filelist]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="s:String[]">[Directory.GetFiles(foldername)]</InArgument>
+      </Assign.Value>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </Assign>
+    <uix:NApplicationCard WebDriverMode="{x:Null}" sap2010:Annotation.AnnotationText="Attach MS Word window" AttachMode="ByInstance" DisplayName="Use Application: Document1 - Word" sap:VirtualizedContainerService.HintSize="508.8,2057.6" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" OpenMode="Always" ScopeGuid="ce4db0e7-4cfa-40f5-99d2-85a2908e6f02" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="475.2,1735.2" sap2010:WorkflowViewState.IdRef="Sequence_3">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NClick ClickType="Single" DisplayName="Click 'Blank document'" sap:VirtualizedContainerService.HintSize="433.6,157.6" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="ce4db0e7-4cfa-40f5-99d2-85a2908e6f02" Version="V1">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="234, 178, 225, 190" FriendlyName="'Blank document'" FullSelectorArgument="&lt;uia automationid='msotcidPlaceHome' cls='NetUIElement' name='Home' /&gt;&lt;uia automationid='HomePageSlabCreateNew' cls='NetUISlabContainer' name='New' /&gt;&lt;uia cls='NetUIListView' /&gt;&lt;uia cls='NetUIListViewItem' name='Blank document' /&gt;" FuzzySelectorArgument="&lt;uia automationid='msotcidPlaceHome' cls='NetUIElement' name='Home' /&gt;&lt;uia automationid='HomePageSlabCreateNew' cls='NetUISlabContainer' name='New' /&gt;&lt;uia cls='NetUIListView' /&gt;&lt;uia cls='NetUIListViewItem' name='Blank document' role='List Item' automationid='' check:fulltext='Blank document' /&gt;" Guid="99492645-5913-48c3-b018-01817056f738" ImageBase64="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" InformativeScreenshot="fdf2a15cf25de8da29b44ab8ce35e0d0.png" ScopeSelectorArgument="&lt;wnd app='winword.exe' cls='OpusApp' title='Word' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Visibility="Interactive" />
+              </uix:NClick.Target>
+            </uix:NClick>
+            <ui:ForEach x:TypeArguments="x:Object" CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="Loop iterates for each item in the list" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="433.6,660.8" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[filelist]">
+              <ui:ForEach.Body>
+                <ActivityAction x:TypeArguments="x:Object">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="x:Object" Name="item" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="375.2,503.2" sap2010:WorkflowViewState.IdRef="Sequence_2">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <WriteLine sap2010:Annotation.AnnotationText="The result will appear in the Output Panel" DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="333.6,106.4" sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="[item.ToString]">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </WriteLine>
+                    <uix:NTypeInto ActivateBefore="True" sap2010:Annotation.AnnotationText="Each item in the list results to be printed in the MS Word file." ClickBeforeMode="Single" DisplayName="Type Into - 'File List into MS Word'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="333.6,262.4" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="ce4db0e7-4cfa-40f5-99d2-85a2908e6f02" Text="[&quot;[k(enter)]&quot;+item.ToString+&quot;[k(enter)]&quot;]" Version="V1">
+                      <uix:NTypeInto.Target>
+                        <uix:TargetAnchorable DesignTimeRectangle="462, 346, 992, 666" ElementType="InputBox" FriendlyName="'edit Page 1 content'" FullSelectorArgument="&lt;uia automationid='Body' name='Page 1 content' role='edit' /&gt;" FuzzySelectorArgument="&lt;uia automationid='Body' name='Page 1 content' role='edit' /&gt;" Guid="7a059080-1dff-452a-8101-a926d83daa38" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAA+QAAAKeCAYAAAAsk9ECAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAA/wSURBVHhe7dcxDcQwAATB8AdmKCZgAI5cfPEA4m1mpCsOwj5zzn02xtgAAADAd057/zpckAMAAMAlghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACf0F+jpmZmZmZmZnd3bPW2mZmZmZmZmZ2c2u/iB7Uo8UM6ycAAAAASUVORK5CYII=" InformativeScreenshot="77abbe8217aff51ccb5bf3725ef4731b.png" ScopeSelectorArgument="&lt;wnd app='winword.exe' cls='OpusApp' title='Document1 - Word' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Visibility="Interactive" />
+                      </uix:NTypeInto.Target>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </uix:NTypeInto>
+                  </Sequence>
+                </ActivityAction>
+              </ui:ForEach.Body>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:ForEach>
+            <uix:NKeyboardShortcuts DelayBetweenShortcuts="{x:Null}" ActivateBefore="True" sap2010:Annotation.AnnotationText="Pressing F12 key opens the 'Save As' Dialog box in the MS Word" ClickBeforeMode="None" DisplayName="Send Hotkey - ' Open the Save As dialog box.‟" sap:VirtualizedContainerService.HintSize="433.6,243.2" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_1" ScopeIdentifier="ce4db0e7-4cfa-40f5-99d2-85a2908e6f02" Shortcuts="[d(hk)][k(f12)][u(hk)]" Version="V1">
+              <uix:NKeyboardShortcuts.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="462, 346, 992, 666" ElementType="InputBox" FriendlyName="'edit Page 1 content'" FullSelectorArgument="&lt;uia automationid='Body' name='Page 1 content' role='edit' /&gt;" FuzzySelectorArgument="&lt;uia automationid='Body' name='Page 1 content' role='edit' /&gt;" Guid="05700866-36cf-43a8-9bb8-08931bc4cb05" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAA+QAAAKeCAYAAAAsk9ECAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAABAqSURBVHhe7ddBbcQAEARB8wdmKCZgAI4sXR4BkOvHVEkj7ULo47qu5915ng8AAADwf972/u1wQQ4AAABfIsgHHcfxuQAAAKgI8kGCHAAAoCfIBwlyAACAniAfJMgBAAB6gnyQIAcAAOgJ8kGCHAAAoCfIBwlyAACAniAfJMgBAAB6gnyQIAcAAOgJ8kGCHAAAoCfIBwlyAACAniAfJMgBAAB6gnyQIAcAAOgJ8kGCHAAAoCfIBwlyAACAniAfJMgBAAB6gnyQIAcAAOgJ8kGCHAAAoCfIBwlyAACAniAfJMgBAAB6gnyQIAcAAOgJ8kGCHAAAoCfIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAIPAnyN/HzMzMzMzMzL67477vx8zMzMzMzMy+ufv5AdebkuW5GbpgAAAAAElFTkSuQmCC" InformativeScreenshot="af0aa4fde65d081442c1f34b4d0b10cc.png" ScopeSelectorArgument="&lt;wnd app='winword.exe' cls='OpusApp' title='Document1 - Word' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Visibility="Interactive" />
+              </uix:NKeyboardShortcuts.Target>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </uix:NKeyboardShortcuts>
+            <uix:NClick sap2010:Annotation.AnnotationText="Press Save button from Save As pop Dialog box." ClickType="Single" DisplayName="Click 'Save' button" sap:VirtualizedContainerService.HintSize="433.6,188.8" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="ce4db0e7-4cfa-40f5-99d2-85a2908e6f02" Version="V1">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="696, 576, 110, 33" ElementType="Button" FriendlyName="'unchecked'" FullSelectorArgument="&lt;wnd ctrlid='1' title='&amp;amp;Save' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlid='1' title='&amp;amp;Save' check:text='unchecked' /&gt;" Guid="2e897236-32d5-4bdf-be75-f1a5f8193330" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAHIAAAAlCAYAAACeVr0yAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAGNSURBVHhe7ZjBlYUgDEXpiW6oZHa0QitU8dd2YAeMRvEnGM/Maobkv8Vd5BBceMnDY1jXtQH7QKQTINIJQmT4egFDCHeiUJrBvAh3ojgblmUBEwORToBIJ0CkEyDSCRDpBIh0AkQ6wbzIkkILgZGK2ucdwyJry/EuruTcKqs/Bbsia24xxJarsvaB2BW5lJa2KE1FWzsh2Sx243taKZKHaa45ih6qr/1zHxrDIt8vOub6sJ7Yyx+iuCQhra/3gzFKpf6QWrn658K0SIJN3ZPQCyFvn2g2ZfScLmpYI6To2bAvskMT8xCXp2hiiNcun/r4tPI9DIj8C8QH0HGH3uJRrYdpI5HzxqiGL5H8A0hE5cHt3usRWoZecSBsYFfk/rLVGD2FjDKoHiZ0g+I1xtv9evxo4Adhm9ok986EXZE9OgXKBPa1XeAYrTsUo/r0jX+NfvyY+kcMiwQcsyL5pGhoezxjViSQQKQTINIJEOkEiHQCRDrh1yKBDYQ7USjNYF6EO14Au0CkEyDSBWv7BiWPq8illys4AAAAAElFTkSuQmCC" InformativeScreenshot="532bccf6b653fbfaaafda08f6efec9d9.png" ScopeSelectorArgument="&lt;wnd app='winword.exe' cls='#32770' title='Save As' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Visibility="Interactive" />
+              </uix:NClick.Target>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </uix:NClick>
+            <uix:NKeyboardShortcuts DelayBetweenShortcuts="{x:Null}" ActivateBefore="True" sap2010:Annotation.AnnotationText="Press 'Alt+F4' key to close the MS Word window" ClickBeforeMode="None" DisplayName="Send Hotkey - 'To close the application‟" sap:VirtualizedContainerService.HintSize="433.6,230.4" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_2" ScopeIdentifier="ce4db0e7-4cfa-40f5-99d2-85a2908e6f02" Shortcuts="[d(hk)][d(alt)][k(f4)][u(alt)][u(hk)]" Version="V1">
+              <uix:NKeyboardShortcuts.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="462, 346, 992, 666" ElementType="InputBox" FriendlyName="'edit Page 1 content'" FullSelectorArgument="&lt;uia automationid='Body' name='Page 1 content' role='edit' /&gt;" FuzzySelectorArgument="&lt;uia automationid='Body' name='Page 1 content' role='edit' /&gt;" Guid="8905b5ce-fbbf-45ec-b175-e074ade1e0ca" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAA+QAAAKeCAYAAAAsk9ECAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAA/wSURBVHhe7dcxDcQwAATB8AdmKCZgAI5cfPEA4m1mpCsOwj5zzn02xtgAAADAd057/zpckAMAAMAlghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACghwAAAACf0F+jpmZmZmZmZnd3bPW2mZmZmZmZmZ2c2u/iB7Uo8UM6ycAAAAASUVORK5CYII=" InformativeScreenshot="26ad8e973b3a704a9a04e8c07ff0659a.png" ScopeSelectorArgument="&lt;wnd app='winword.exe' cls='OpusApp' title='Document1 - Word' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Visibility="Interactive" />
+              </uix:NKeyboardShortcuts.Target>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </uix:NKeyboardShortcuts>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="-9, -9, 1938, 1048" FilePath="C:\Program Files\Microsoft Office\root\Office16\winword.exe" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAATCSURBVFhH7ZhtUFRlFMehaaYy3F1hXV7UACk1nZrJHCHyJacZULR4MdAyAjQNKhvTcewFmCyzSVCwaWqsSWukhsrlxQoBBZZlidDNEl8qx0aRtCLQGis/+OF0znn2Prss1+UuXPeD05n5DXcvc/f/4znnee4MQddT3RBgNFfwvIq+2nkfX4CAUtFf48ofsm5W/YIAgNk3CgXfZVR7OBBgdohQ8F0mtYcDAWaHCgXf9b/g1cBsrYL9+MBQqIeMBMzWJjhnZw9cnV+YubvOwwO7e+l4UA0bDpgdGnR7QXs1AnH5DmbiU0QbTFzVBrHEyjaIedIuWGGHaKYVbluO5LXChFwbMz7HBpOe70TRcyjapxroLywYV+AlhihisStdYsggsTy32PicFhj3BJLdAnc8ewCmvuCEaYVdyNERIQQ95Nxi7lUbIIZM8Fq1cS65qOxmiHq8GVe+Du5c3wHTXj6iGuoPLCjFvNrpLebdTveqoRgSiXKRy5ohdkUtTFnngKkvfa8a6g8s6NnO8r3dUFbbDfdv6JRyies7YVvNGSa5yCnF4td2wNaq01CKkFjksiaIeKwJYvKqYMpaOwp+pxrqD0LQY856+i4DVRnKiHba4JVPTvE9qvcbenjOaMWKK07yvbO9l1mMCH/0gEuwVT9Bz3Z+7viNQzt+uCjbWf/tH3yP6lj3JZ4zauen9l/5XmXreYhAsfClxH6IybXqK+g5Z8pq/fXPFTlndO1Zk1fZuZ3Hzlziz0Uf/cRi4Uv2g2VJI0TrLSg3ALYzudjJoVQJOGNJhYf4+usTF6VQxmuHccWa+JrqwQ3foFwjWLKQzAaIztFZcOB5ZpMrtry8C9bsOMHX7+07y1CV7PkZ0l8Vf8iff1+RYpbMerA8Uo+Ce3QWdMkp51m9U8xcqfW0nLPcrUfguXeP83X78QvcVqq6g78LORQbu3gfY07ZBZbFVohY2ig3z3BhQc+3AO/O3WJ3tmNbaYdSzVjtYJSqtJ3jn1s+OwVjFbmMOsacslNfQUWMdyeeZxmbDnO4UiQpNkEjXv/ruisqrbgTpYScOf0rMKchegsqxwbJKb/wrLqDvWLOshqgskWsnFJCDCGx1C/B/PAXELZAZ0HPt4ByntGcKVX44Y9yzla/3eW6C+A42u8WS0UxkntoLwp+oK8gf8Bjg94CynmWvvEQlOB8Efc+3SrnbHq+DbZUnmSyNztZTooRi2r1F5RirjnzPjbEBvCaM6WdihyKhS5EUmogbL7egspbwDVnA44NKeY1Zx5iYSS2sAblqiF0QbX+gvR6kqtGYlIOjw0S41XzmjO5am6xMfOrYEyyFcKS3kHBKh0FMxuqqZ1uscHtZLEB7SQxRIohSVYwzHoLRk9fB8bEN8A0ZxuY5m4fESyooUy3xKWCb9Jg1KQsuPWufDDMLATjrDcxoGxQoL9gtjbBkLsLwDfPQMg9a2D0jBfBeN8mMM0uxYDyQYH+gtnaBA0zi3BlfBBfDIaEjdjazWCcXYLtHfnqEZitTZBCh4JXjedOHzkCs7UJinZpQT1ouGC2VkH1L7jWYPb1ITgKh79Z7QuuJcbE11sw2yAUfNdNyGQkIYDEI5RJ2UNWMEL/io1AogIEZWFmUPB/G0TZjj5N0YUAAAAASUVORK5CYII=" InformativeScreenshot="0930d39b5107e825716c55946d5ea8b0.png" Selector="&lt;wnd app='winword.exe' cls='OpusApp' title='*' /&gt;" />
+      </uix:NApplicationCard.TargetApp>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>

@@ -1,0 +1,186 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="892,1702.4" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>System.ComponentModel</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence sap2010:Annotation.AnnotationText="This block of code demonstrates a workflow using Split and Contains methods that extract sentences containing “RPA” from a paragraph" DisplayName="Sequence - This code is to demonstrate the use of Split and Contains method" sap:VirtualizedContainerService.HintSize="628.8,1637.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="newtext" />
+      <Variable x:TypeArguments="s:String[]" Name="newsentence" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <Assign sap2010:Annotation.AnnotationText="This message is stored in the variable: newText” and enter the values as shown below" DisplayName="Assign - Message" sap:VirtualizedContainerService.HintSize="587.2,120" sap2010:WorkflowViewState.IdRef="Assign_1">
+      <Assign.To>
+        <OutArgument x:TypeArguments="x:String">[newtext]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="x:String">Robotic process automation (RPA) is a software technology that makes it easy to build, deploy, and manage software robots that emulate human actions interacting with digital systems and software. RPA streamlines workflows, which makes organizations more profitable, flexible, and responsive. RPA is noninvasive and can be rapidly implemented to accelerate digital transformation. It also increases employee satisfaction, engagement, and productivity by removing mundane tasks from their workdays.</InArgument>
+      </Assign.Value>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </Assign>
+    <Assign sap2010:Annotation.AnnotationText="String Manipulation -Split string" DisplayName="Assign - Split sentences and store it in an array." sap:VirtualizedContainerService.HintSize="587.2,91.2" sap2010:WorkflowViewState.IdRef="Assign_2">
+      <Assign.To>
+        <OutArgument x:TypeArguments="s:String[]">[newsentence]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="s:String[]">[newText.Split(“.”c)]</InArgument>
+      </Assign.Value>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </Assign>
+    <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="587.2,1209.6" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[newsentence]">
+      <ui:ForEach.Body>
+        <ActivityAction x:TypeArguments="x:String">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:String" Name="item" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="552,1084.8" sap2010:WorkflowViewState.IdRef="Sequence_5">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <If sap2010:Annotation.AnnotationText="This activity judges whether the sentence contains word „RPA‟.” and enter condition as item.Contains(&quot;RPA&quot;)" Condition="[item.Contains(&quot;RPA&quot;)]" DisplayName="If - item contains word &quot;RPA&quot;" sap:VirtualizedContainerService.HintSize="510.4,992" sap2010:WorkflowViewState.IdRef="If_1">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <If.Then>
+                <Sequence sap:VirtualizedContainerService.HintSize="475.2,759.2" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <uix:NApplicationCard sap2010:Annotation.AnnotationText="Attach MS Word window" AttachMode="ByInstance" DisplayName="Attach Window - MS Word" sap:VirtualizedContainerService.HintSize="433.6,666.4" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" ScopeGuid="9e57ffbd-2937-48d1-970b-96d53e171aa7" Version="V1">
+                    <uix:NApplicationCard.Body>
+                      <ActivityAction x:TypeArguments="x:Object">
+                        <ActivityAction.Argument>
+                          <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                        </ActivityAction.Argument>
+                        <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="375.2,344" sap2010:WorkflowViewState.IdRef="Sequence_2">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <uix:NTypeInto ActivateBefore="True" sap2010:Annotation.AnnotationText="Types each item in the word file" ClickBeforeMode="Single" DisplayName="Type Into - MS Word" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="333.6,249.6" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="9e57ffbd-2937-48d1-970b-96d53e171aa7" Text="[item.ToString+ &quot;[k(enter)]&quot;]" Version="V1">
+                            <uix:NTypeInto.Target>
+                              <uix:TargetAnchorable DesignTimeRectangle="462, 346, 992, 666" ElementType="InputBox" FriendlyName="'edit Page 1 content'" FullSelectorArgument="&lt;uia automationid='Body' name='Page 1 content' role='edit' /&gt;" FuzzySelectorArgument="&lt;uia automationid='Body' name='Page 1 content' role='edit' /&gt;" Guid="35847ccf-3a67-4f47-8479-082414c7bb3b" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAA+QAAAKeCAYAAAAsk9ECAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAABAqSURBVHhe7ddBbcQAEARB8wdmKCZgAI4sXR4BkOvHVEkj7ULo47qu5915ng8AAADwf972/u1wQQ4AAABfIsgHHcfxuQAAAKgI8kGCHAAAoCfIBwlyAACAniAfJMgBAAB6gnyQIAcAAOgJ8kGCHAAAoCfIBwlyAACAniAfJMgBAAB6gnyQIAcAAOgJ8kGCHAAAoCfIBwlyAACAniAfJMgBAAB6gnyQIAcAAOgJ8kGCHAAAoCfIBwlyAACAniAfJMgBAAB6gnyQIAcAAOgJ8kGCHAAAoCfIBwlyAACAniAfJMgBAAB6gnyQIAcAAOgJ8kGCHAAAoCfIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAICDIAQAAIPAnyN/HzMzMzMzMzL67477vx8zMzMzMzMy+ufv5AdebkuW5GbpgAAAAAElFTkSuQmCC" InformativeScreenshot="7ef29d86048ee01d17a6ea894369ff54.png" ScopeSelectorArgument="&lt;wnd app='winword.exe' cls='OpusApp' title='Document1 - Word' /&gt;" SearchSteps="Selector, FuzzySelector, Image" />
+                            </uix:NTypeInto.Target>
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </uix:NTypeInto>
+                        </Sequence>
+                      </ActivityAction>
+                    </uix:NApplicationCard.Body>
+                    <uix:NApplicationCard.TargetApp>
+                      <uix:TargetApp Area="-9, -9, 1938, 1048" FilePath="C:\Program Files\Microsoft Office\root\Office16\winword.exe" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAATCSURBVFhH7ZhtUFRlFMehaaYy3F1hXV7UACk1nZrJHCHyJacZULR4MdAyAjQNKhvTcewFmCyzSVCwaWqsSWukhsrlxQoBBZZlidDNEl8qx0aRtCLQGis/+OF0znn2Prss1+UuXPeD05n5DXcvc/f/4znnee4MQddT3RBgNFfwvIq+2nkfX4CAUtFf48ofsm5W/YIAgNk3CgXfZVR7OBBgdohQ8F0mtYcDAWaHCgXf9b/g1cBsrYL9+MBQqIeMBMzWJjhnZw9cnV+YubvOwwO7e+l4UA0bDpgdGnR7QXs1AnH5DmbiU0QbTFzVBrHEyjaIedIuWGGHaKYVbluO5LXChFwbMz7HBpOe70TRcyjapxroLywYV+AlhihisStdYsggsTy32PicFhj3BJLdAnc8ewCmvuCEaYVdyNERIQQ95Nxi7lUbIIZM8Fq1cS65qOxmiHq8GVe+Du5c3wHTXj6iGuoPLCjFvNrpLebdTveqoRgSiXKRy5ohdkUtTFnngKkvfa8a6g8s6NnO8r3dUFbbDfdv6JRyies7YVvNGSa5yCnF4td2wNaq01CKkFjksiaIeKwJYvKqYMpaOwp+pxrqD0LQY856+i4DVRnKiHba4JVPTvE9qvcbenjOaMWKK07yvbO9l1mMCH/0gEuwVT9Bz3Z+7viNQzt+uCjbWf/tH3yP6lj3JZ4zauen9l/5XmXreYhAsfClxH6IybXqK+g5Z8pq/fXPFTlndO1Zk1fZuZ3Hzlziz0Uf/cRi4Uv2g2VJI0TrLSg3ALYzudjJoVQJOGNJhYf4+usTF6VQxmuHccWa+JrqwQ3foFwjWLKQzAaIztFZcOB5ZpMrtry8C9bsOMHX7+07y1CV7PkZ0l8Vf8iff1+RYpbMerA8Uo+Ce3QWdMkp51m9U8xcqfW0nLPcrUfguXeP83X78QvcVqq6g78LORQbu3gfY07ZBZbFVohY2ig3z3BhQc+3AO/O3WJ3tmNbaYdSzVjtYJSqtJ3jn1s+OwVjFbmMOsacslNfQUWMdyeeZxmbDnO4UiQpNkEjXv/ruisqrbgTpYScOf0rMKchegsqxwbJKb/wrLqDvWLOshqgskWsnFJCDCGx1C/B/PAXELZAZ0HPt4ByntGcKVX44Y9yzla/3eW6C+A42u8WS0UxkntoLwp+oK8gf8Bjg94CynmWvvEQlOB8Efc+3SrnbHq+DbZUnmSyNztZTooRi2r1F5RirjnzPjbEBvCaM6WdihyKhS5EUmogbL7egspbwDVnA44NKeY1Zx5iYSS2sAblqiF0QbX+gvR6kqtGYlIOjw0S41XzmjO5am6xMfOrYEyyFcKS3kHBKh0FMxuqqZ1uscHtZLEB7SQxRIohSVYwzHoLRk9fB8bEN8A0ZxuY5m4fESyooUy3xKWCb9Jg1KQsuPWufDDMLATjrDcxoGxQoL9gtjbBkLsLwDfPQMg9a2D0jBfBeN8mMM0uxYDyQYH+gtnaBA0zi3BlfBBfDIaEjdjazWCcXYLtHfnqEZitTZBCh4JXjedOHzkCs7UJinZpQT1ouGC2VkH1L7jWYPb1ITgKh79Z7QuuJcbE11sw2yAUfNdNyGQkIYDEI5RJ2UNWMEL/io1AogIEZWFmUPB/G0TZjj5N0YUAAAAASUVORK5CYII=" InformativeScreenshot="d48d293e147f572c68c3115403cd44cc.png" Selector="&lt;wnd app='winword.exe' cls='OpusApp' title='Document1 - Word'/&gt;" />
+                    </uix:NApplicationCard.TargetApp>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </uix:NApplicationCard>
+                </Sequence>
+              </If.Then>
+              <If.Else>
+                <Sequence sap2010:WorkflowViewState.IdRef="Sequence_4">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </Sequence>
+              </If.Else>
+            </If>
+          </Sequence>
+        </ActivityAction>
+      </ui:ForEach.Body>
+    </ui:ForEach>
+  </Sequence>
+</Activity>
