@@ -179,5 +179,8 @@ Developed as part of the **Robotic Process Automation (RPA)** course in undergra
 - [EaseMyTrip](https://www.easemytrip.com/flights.html)  
 
 ---
+## This repo also contains the Lab Files done for the course Robotic Process Automation (RPA) during my undergraduate at Vellore Institute of Technology Chennai (VIT Chennai)
+
+---
 
 📬 Let’s connect on [LinkedIn](https://www.linkedin.com/in/je-pulipati/)
